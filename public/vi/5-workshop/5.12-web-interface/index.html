@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html lang="vi" class="js csstransforms3d">
+  <head><script src="/AWS_INTERN/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=AWS_INTERN/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.163.3">
+    <meta name="description" content="">
+<meta name="author" content="dangquoctuan12t1nh2022@gmail.com">
+
+    <link rel="icon" href="http://localhost:1313/AWS_INTERN/images/favicon.png" type="image/png">
+
+    <title>Kiểm thử Giao diện &amp; Báo cáo Sản phẩm :: Báo cáo thực tập</title>
+
+    
+    <link href="http://localhost:1313/AWS_INTERN/css/nucleus.css?1784591278" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_INTERN/css/fontawesome-all.min.css?1784591278" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_INTERN/css/hybrid.css?1784591278" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_INTERN/css/featherlight.min.css?1784591278" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_INTERN/css/perfect-scrollbar.min.css?1784591278" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_INTERN/css/auto-complete.css?1784591278" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_INTERN/css/atom-one-dark-reasonable.css?1784591278" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_INTERN/css/theme.css?1784591278" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_INTERN/css/tabs.css?1784591278" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_INTERN/css/hugo-theme.css?1784591278" rel="stylesheet">
+    
+    <link href="http://localhost:1313/AWS_INTERN/css/theme-blue.css?1784591278" rel="stylesheet">
+    
+    
+
+    <script src="http://localhost:1313/AWS_INTERN/js/jquery-3.3.1.min.js?1784591278"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.12-web-interface/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="http://localhost:1313/AWS_INTERN/">
+  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="100%" style="max-width: 150px;">
+    <defs>
+      <style>.cls-1{fill:#fff;}.cls-2{fill:#fff;fill-rule:evenodd;}</style>
+    </defs>
+    <title>AWS-Logo_White-Color</title>
+    <path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path>
+    <path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path>
+    <path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path>
+  </svg>
+</a>
+
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="http://localhost:1313/AWS_INTERN/js/lunr.min.js?1784591278"></script>
+<script type="text/javascript" src="http://localhost:1313/AWS_INTERN/js/auto-complete.js?1784591278"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/localhost:1313\/AWS_INTERN\/\/vi";
+    
+</script>
+<script type="text/javascript" src="http://localhost:1313/AWS_INTERN/js/search.js?1784591278"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='http://localhost:1313/AWS_INTERN/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/" title="Nhật ký công việc" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/1-worklog/">
+           <b> 1. </b> Nhật ký công việc
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/1.1-week1/" title="Worklog Tuần 1" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.1-week1/">
+           <b> 1.1. </b> Worklog Tuần 1
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/1.9-week9/" title="Worklog Tuần 9" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.9-week9/">
+           <b> 1.9. </b> Worklog Tuần 9
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/1.2-week2/" title="Worklog Tuần 2" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.2-week2/">
+           <b> 1.2. </b> Worklog Tuần 2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/1.10-week10/" title="Worklog Tuần 10" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.10-week10/">
+           <b> 1.10. </b> Worklog Tuần 10
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/1.11-week11/" title="Worklog Tuần 11" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.11-week11/">
+           <b> 1.11. </b> Worklog Tuần 11
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/1.12-week12/" title="Worklog Tuần 12" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.12-week12/">
+           <b> 1.12 </b> Worklog Tuần 12
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/1.3-week3/" title="Worklog Tuần 3" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.3-week3/">
+           <b> 1.3. </b> Worklog Tuần 3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/1.4-week4/" title="Worklog Tuần 4" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.4-week4/">
+           <b> 1.4. </b> Worklog Tuần 4
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/1.5-week5/" title="Worklog Tuần 5" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.5-week5/">
+           <b> 1.5. </b> Worklog Tuần 5
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/1.6-week6/" title="Worklog Tuần 6" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.6-week6/">
+           <b> 1.6. </b> Worklog Tuần 6
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/1.7-week7/" title="Worklog Tuần 7" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.7-week7/">
+           <b> 1.7. </b> Worklog Tuần 7
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/1.8-week8/" title="Worklog Tuần 8" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.8-week8/">
+           <b> 1.8. </b> Worklog Tuần 8
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-proposal/" title="Bản đề xuất" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/2-proposal/">
+           <b> 2. </b> Bản đề xuất
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-blogsposted/" title="Các bài blogs" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/3-blogsposted/">
+           <b> 3. </b> Các bài blogs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-blogsposted/3.1-blog1/" title="Blog 1" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/3-blogsposted/3.1-blog1/">
+           <b> 3.1. </b> Blog 1
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-blogsposted/3.2-blog2/" title="Blog 2" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/3-blogsposted/3.2-blog2/">
+           <b> 3.2. </b> Blog 2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-blogsposted/3.3-blog3/" title="Blog 3" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/3-blogsposted/3.3-blog3/">
+           <b> 3.3. </b> Blog 3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-eventparticipated/" title="Các events đã tham gia" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/4-eventparticipated/">
+           <b> 4. </b> Các events đã tham gia
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-eventparticipated/4.1-event1/" title="Event 1" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/4-eventparticipated/4.1-event1/">
+           <b> 4.1. </b> Event 1
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-eventparticipated/4.2-event2/" title="Event 2" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/4-eventparticipated/4.2-event2/">
+           <b> 4.2. </b> Event 2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/" title="Workshop" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/5-workshop/">
+           <b> 5. </b> Workshop
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.1-workshop-overview/" title="Tổng quan về workshop" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.1-workshop-overview/">
+           <b> 5.1. </b> Tổng quan về workshop
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.2-prerequiste/" title="Chuẩn bị" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.2-prerequiste/">
+           <b> 5.2. </b> Chuẩn bị
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.3-amazon-dynamodb/" title="Thiết lập Amazon DynamoDB" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.3-amazon-dynamodb/">
+           <b> 5.3. </b> Thiết lập Amazon DynamoDB
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.4-amazon-s3/" title="Thiết lập Amazon S3" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.4-amazon-s3/">
+           <b> 5.4. </b> Thiết lập Amazon S3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.5-aws-lambda/" title="Triển khai AWS Lambda &amp; Cấu hình IAM" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.5-aws-lambda/">
+           <b> 5.5. </b> Triển khai AWS Lambda &amp; Cấu hình IAM
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.6-lamda-to-cloudwatch/" title="Thiết lập CloudWatch cho AWS Lambda" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.6-lamda-to-cloudwatch/">
+           <b> 5.6. </b> Thiết lập CloudWatch cho AWS Lambda
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.7-cloudwatch-to-amazonsns/" title="Cấu hình Amazon SNS" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.7-cloudwatch-to-amazonsns/">
+           <b> 5.7. </b> Cấu hình Amazon SNS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.8-amplify/" title="Đẩy giao diện lên AWS Amplify" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.8-amplify/">
+           <b> 5.8. </b> Đẩy giao diện lên AWS Amplify
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.9-cloudfront/" title="Kích hoạt CloudFront, WAF &amp; Route 53" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.9-cloudfront/">
+           <b> 5.9. </b> Kích hoạt CloudFront, WAF &amp; Route 53
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.10-apigateway/" title="Khởi tạo API Gateway và liên kết" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.10-apigateway/">
+           <b> 5.10. </b> Khởi tạo API Gateway và liên kết
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.11-cognito/" title="Cấu hình Amazon Cognito làm Authorizer" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.11-cognito/">
+           <b> 5.11. </b> Cấu hình Amazon Cognito làm Authorizer
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.12-web-interface/" title="Kiểm thử Giao diện &amp; Báo cáo Sản phẩm" class="dd-item
+        
+        active
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.12-web-interface/">
+           <b> 5.12. </b> Kiểm thử Giao diện &amp; Báo cáo Sản phẩm
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.13-cleanup/" title="Dọn dẹp tài nguyên" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.13-cleanup/">
+           <b> 5.13. </b> Dọn dẹp tài nguyên
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-selfassessment/" title="Tự đánh giá" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/6-selfassessment/">
+           <b> 6. </b> Tự đánh giá
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/7-feedback/" title="Chia sẻ, đóng góp ý kiến" class="dd-item
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_INTERN/vi/7-feedback/">
+           <b> 7. </b> Chia sẻ, đóng góp ý kiến
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="http://localhost:1313/AWS_INTERN/vi/"></a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/user/100015108252190"><i class='fab fa-facebook fa-fw'></i> AWS Study Group - Blog-1</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://web.facebook.com/groups/660548818043427/user/100029043690648"><i class='fab fa-facebook fa-fw'></i> AWS Study Group - Blog-2</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="http://localhost:1313/AWS_INTERN/5-workshop/5.12-web-interface/">English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="vi" value="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.12-web-interface/" selected>Tiếng Việt</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='http://localhost:1313/AWS_INTERN/vi/'>Báo cáo thực tập</a> > <a href='http://localhost:1313/AWS_INTERN/vi/5-workshop/'>Workshop</a> > Kiểm thử Giao diện & Báo cáo Sản phẩm
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#kiểm-thử-giao-diện-người-dùng--báo-cáo-ứng-dụng-web-ai-riddle-generator">Kiểm thử Giao diện Người dùng &amp; Báo cáo Ứng dụng Web AI Riddle Generator</a></li>
+        <li><a href="#1-chi-tiết-các-phân-hệ-chức-năng-trên-giao-diện">1. Chi tiết Các Phân hệ Chức năng trên Giao diện</a></li>
+        <li><a href="#2-kịch-bản-kiểm-thử-thực-tế-giao-diện-web-chi-tiết-từng-bước">2. Kịch bản Kiểm thử Thực tế Giao diện Web (Chi tiết từng bước)</a></li>
+        <li><a href="#3-các-tính-năng-phát-triển-trong-tương-lai-future-development">3. Các Tính năng Phát triển trong Tương lai (Future Development)</a></li>
+        <li><a href="#4-đánh-giá-tổng-kết-sản-phẩm">4. Đánh giá Tổng kết Sản phẩm</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Kiểm thử Giao diện &amp; Báo cáo Sản phẩm
+            </h1>
+          
+
+        
+
+
+
+	<h3 id="kiểm-thử-giao-diện-người-dùng--báo-cáo-ứng-dụng-web-ai-riddle-generator">Kiểm thử Giao diện Người dùng &amp; Báo cáo Ứng dụng Web AI Riddle Generator</h3>
+<p>Sau khi hoàn tất cấu hình toàn bộ hạ tầng backend Serverless trên AWS (bao gồm DynamoDB, S3, Lambda, API Gateway, Cognito, và Amplify), bước cuối cùng là truy cập và nghiệm thu ứng dụng web frontend hoàn chỉnh.</p>
+<p>Ứng dụng được thiết kế theo cấu trúc <strong>Single-Page Application (SPA)</strong> phát triển trên nền tảng <strong>React 19</strong> kết hợp với công cụ đóng gói siêu tốc <strong>Vite 8</strong>. Giao diện áp dụng phong cách thiết kế <strong>Glassmorphism</strong> (giao diện kính mờ) hiện đại, hỗ trợ đầy đủ các hiệu ứng chuyển đổi mượt mà và khả năng đáp ứng (responsive layout) tốt trên mọi thiết bị.</p>
+<hr>
+<h3 id="1-chi-tiết-các-phân-hệ-chức-năng-trên-giao-diện">1. Chi tiết Các Phân hệ Chức năng trên Giao diện</h3>
+<p>Ứng dụng web được chia thành các phân hệ chức năng tương ứng với các menu điều hướng chính:</p>
+<h4 id="11-phân-hệ-tạo-câu-đố-generator-hub">1.1. Phân hệ Tạo Câu Đố (Generator Hub)</h4>
+<p>Nơi người dùng (Giáo viên, Phụ huynh) tương tác trực tiếp với mô hình Trí tuệ nhân tạo (AI):</p>
+<ul>
+<li><strong>Các bộ lọc cấu hình:</strong>
+<ul>
+<li><em>Độ tuổi:</em> Phân loại theo cấp học (Cấp 1, Cấp 2, Cấp 3) để AI tự điều chỉnh từ vựng và độ khó phù hợp với tư duy trẻ em.</li>
+<li><em>Thể loại câu đố:</em> Hỗ trợ câu đố ghép chữ đầu từ khóa (Acrostic) hoặc câu đố tư duy logic (Lịch sử - Văn học, Khoa học - Toán học).</li>
+<li><em>Chủ đề:</em> Địa lý, Khoa học, Lịch sử, Động vật, Thực vật&hellip;</li>
+</ul>
+</li>
+<li><strong>Cơ chế sinh câu đố:</strong> Người dùng nhập một &ldquo;Từ khóa&rdquo; (Keyword). Khi nhấn nút tạo, hệ thống gửi payload đến API Gateway. Trình diễn kết quả bao gồm: nội dung câu đố, các gợi ý (Hint 1, Hint 2) và Đáp án được che giấu dưới dạng collapsible (nhấp vào để hiển thị).</li>
+<li><strong>Tính năng lưu trữ:</strong> Nếu đã đăng nhập, nút <strong>&ldquo;Lưu Vào Thư Viện&rdquo;</strong> sẽ xuất hiện cho phép lưu trữ câu đố trực tiếp vào cơ sở dữ liệu DynamoDB.</li>
+</ul>
+<h4 id="12-phân-hệ-cộng-đồng-community-board">1.2. Phân hệ Cộng Đồng (Community Board)</h4>
+<p>Bảng tin hiển thị các câu đố được chia sẻ công khai bởi các thành viên:</p>
+<ul>
+<li><strong>Sắp xếp nổi bật (Featured Sorting):</strong> Áp dụng cấu trúc chỉ mục phụ <strong>GSI1 (Global Secondary Index)</strong> trong DynamoDB để sắp xếp các câu đố theo số lượt bình chọn (Upvotes) giảm dần.</li>
+<li><strong>Bình chọn (Upvoting):</strong> Cơ chế kiểm soát chặt chẽ, người dùng đăng nhập chỉ được bình chọn tối đa một lần cho mỗi câu đố. Lượt bình chọn sẽ được cập nhật thời gian thực lên giao diện.</li>
+<li><strong>Sao chép nhanh:</strong> Cho phép người dùng lưu nhanh bất kỳ câu đố cộng đồng nào về thư viện cá nhân của mình.</li>
+</ul>
+<h4 id="13-phân-hệ-thư-viện-của-tôi-personal-library">1.3. Phân hệ Thư Viện Của Tôi (Personal Library)</h4>
+<p>Kho lưu trữ cá nhân của riêng tài khoản đang đăng nhập:</p>
+<ul>
+<li><strong>Quản lý danh sách:</strong> Truy vấn DynamoDB theo khóa phân vùng (Partition Key - PK) <code>USER#&lt;UserId&gt;</code> và bắt đầu bằng khóa sắp xếp (Sort Key - SK) <code>RIDDLE#</code> để lấy ra danh sách câu đố mà tài khoản đó tự tạo.</li>
+<li><strong>Xuất tài liệu (Document Export):</strong> Nút xuất file PDF/Word liên kết trực tiếp với Amazon S3. Khi người dùng click, hệ thống yêu cầu một <strong>S3 Presigned URL</strong> có thời hạn ngắn để tải xuống tài liệu câu đố chất lượng cao, phục vụ cho việc in ấn giảng dạy trên lớp.</li>
+</ul>
+<h4 id="14-phân-hệ-xác-thực-người-dùng-cognito-authentication">1.4. Phân hệ Xác thực Người dùng (Cognito Authentication)</h4>
+<p>Cổng đăng nhập và đăng ký tích hợp hệ thống bảo mật:</p>
+<ul>
+<li><strong>Đăng ký tài khoản:</strong> Phân chia rõ ràng vai trò <strong>Giáo viên (Teacher)</strong> hoặc <strong>Phụ huynh (Parent)</strong> nhằm gán các quyền IAM (Identity and Access Management) tương thích.</li>
+<li><strong>Giả lập đăng nhập nhanh:</strong> Cung cấp các cấu hình tài khoản mẫu (Teacher Nguyễn Thị Mai, Parent Trần Văn Thu) để thuận tiện cho việc kiểm thử phân quyền ngay trên trình duyệt.</li>
+</ul>
+<hr>
+<h3 id="2-kịch-bản-kiểm-thử-thực-tế-giao-diện-web-chi-tiết-từng-bước">2. Kịch bản Kiểm thử Thực tế Giao diện Web (Chi tiết từng bước)</h3>
+<p>Dưới đây là kịch bản chạy thử nghiệm thực tế liên tục từ đầu đến cuối (End-to-End User Journey) của ứng dụng web được ghi nhận trực tiếp từ môi trường chạy thử nghiệm:</p>
+<h4 id="21-bước-1-khởi-động--luồng-đăng-nhập-authentication-flow">2.1. Bước 1: Khởi động &amp; Luồng Đăng nhập (Authentication Flow)</h4>
+<ol>
+<li><strong>Truy cập trang đăng nhập:</strong> Người dùng truy cập trang chủ và nhấn chọn nút <strong>Đăng nhập</strong> ở góc trên bên phải. Hệ thống chuyển sang giao diện xác thực tích hợp AWS Cognito.
+<img src="http://localhost:1313/AWS_INTERN/images/5-Workshop/5.12-Web-Interface/test_login_page.png" alt="Đăng nhập Cognito"></li>
+<li><strong>Xác thực nhanh:</strong> Sử dụng cấu hình tài khoản Giáo viên mẫu <code>&quot;Cô Nguyễn Thị Mai&quot;</code> để thực hiện luồng đăng nhập giả lập.</li>
+<li><strong>Đăng nhập thành công:</strong> Sau 2 giây, hệ thống trả về Token JWT và chuyển hướng về trang chủ. Góc phải màn hình hiển thị thông tin hồ sơ của tài khoản đang hoạt động.
+<img src="http://localhost:1313/AWS_INTERN/images/5-Workshop/5.12-Web-Interface/test_login_success.png" alt="Đăng nhập thành công"></li>
+</ol>
+<h4 id="22-bước-2-tạo-câu-đố-với-ai-riddle-creation">2.2. Bước 2: Tạo Câu Đố Với AI (Riddle Creation)</h4>
+<ol>
+<li><strong>Nhập tham số cấu hình:</strong> Tại tab <strong>Tạo Câu Đố</strong>, chúng tôi chọn chủ đề &ldquo;Địa lý&rdquo;, cấp học &ldquo;Cấp 1&rdquo; và nhập từ khóa đáp án là <code>&quot;Trái Đất&quot;</code>.
+<img src="http://localhost:1313/AWS_INTERN/images/5-Workshop/5.12-Web-Interface/test_create_riddle_input.png" alt="Nhập từ khóa"></li>
+<li><strong>Kích hoạt AI tạo câu đố:</strong> Nhấn chọn nút <strong>⚡ Tạo Câu Đố Với AI</strong>. Hệ thống gửi yêu cầu qua API Gateway đến AWS Lambda để kích hoạt Amazon Bedrock LLM sinh câu đố thơ chữ đầu (Acrostic).</li>
+<li><strong>Hiển thị kết quả ban đầu:</strong> Câu đố thơ Acrostic được kết xuất dưới định dạng Glassmorphism sang trọng với các gợi ý và đáp án ban đầu được ẩn kín.
+<img src="http://localhost:1313/AWS_INTERN/images/5-Workshop/5.12-Web-Interface/test_create_riddle_result.png" alt="Kết quả tạo câu đố"></li>
+<li><strong>Mở gợi ý khái quát:</strong> Nhấp chuột vào collapsible <strong>💡 Gợi ý bước 1 (Khái quát)</strong> để hiển thị gợi ý gợi mở tư duy đầu tiên cho trẻ.
+<img src="http://localhost:1313/AWS_INTERN/images/5-Workshop/5.12-Web-Interface/test_create_riddle_hint.png" alt="Hiển thị Gợi ý 1"></li>
+<li><strong>Mở đáp án cuối cùng:</strong> Nhấp chuột vào collapsible <strong>🏆 XEM ĐÁP ÁN CUỐI CÙNG</strong> để hiển thị chính xác từ khóa đáp án <code>&quot;Trái Đất&quot;</code>.
+<img src="http://localhost:1313/AWS_INTERN/images/5-Workshop/5.12-Web-Interface/test_create_riddle_answer.png" alt="Hiển thị Đáp án"></li>
+<li><strong>Lưu trữ vào DynamoDB:</strong> Giáo viên click chọn <strong>Lưu Vào Thư Viện</strong>. Hệ thống ghi dữ liệu xuống DynamoDB Table thông qua khóa phân vùng và khóa sắp xếp. Nút lưu chuyển sang trạng thái <code>⭐ Đã Lưu Vào Thư Viện</code>.
+<img src="http://localhost:1313/AWS_INTERN/images/5-Workshop/5.12-Web-Interface/test_create_riddle_saved.png" alt="Lưu câu đố thành công"></li>
+</ol>
+<h4 id="23-bước-3-tương-tác-cộng-đồng--cơ-chế-giải-đố-community-interactivity">2.3. Bước 3: Tương tác Cộng đồng &amp; Cơ chế Giải đố (Community Interactivity)</h4>
+<p>Chuyển sang phân hệ <strong>Cộng Đồng</strong> nơi tổng hợp câu đố công khai của các thành viên:</p>
+<ol>
+<li><strong>Đoán đúng đáp án:</strong>
+<ul>
+<li>Tìm đến thẻ câu đố nổi bật về <code>&quot;Bánh Chưng&quot;</code>.</li>
+<li>Nhập đáp án <code>&quot;Bánh Chưng&quot;</code> và nhấn nút <strong>Đoán</strong>.</li>
+<li>Giao diện phản hồi thông báo màu xanh lá: <code>🎉 Chính xác! Đáp án đúng là: Bánh Chưng</code>.
+<img src="http://localhost:1313/AWS_INTERN/images/5-Workshop/5.12-Web-Interface/test_community_guess_correct.png" alt="Đoán đúng đáp án"></li>
+</ul>
+</li>
+<li><strong>Đoán sai đáp án:</strong>
+<ul>
+<li>Thử nhập câu trả lời sai như <code>&quot;Bánh dày&quot;</code> trên một thẻ câu đố và nhấn <strong>Đoán</strong>.</li>
+<li>Hệ thống phản hồi cảnh báo đỏ trực quan: <code>❌ Chưa đúng rồi, thử lại nhé!</code>.
+<img src="http://localhost:1313/AWS_INTERN/images/5-Workshop/5.12-Web-Interface/test_community_guess_incorrect.png" alt="Đoán sai đáp án"></li>
+</ul>
+</li>
+<li><strong>Bình chọn câu đố (Upvoting):</strong>
+<ul>
+<li>Nhấn biểu tượng nút 👍 ở góc trên thẻ câu đố Bánh Chưng. Điểm upvotes tăng từ 56 lên 57.</li>
+<li>Hệ thống kiểm tra và lưu bản ghi loại thực thể <code>UPVOTE</code> để giới hạn mỗi tài khoản chỉ được bầu chọn một lần duy nhất.
+<img src="http://localhost:1313/AWS_INTERN/images/5-Workshop/5.12-Web-Interface/test_community_upvote.png" alt="Upvote thành công"></li>
+</ul>
+</li>
+</ol>
+<h4 id="24-bước-4-kho-lưu-trữ-cá-nhân--xuất-bản-pdf-my-library--s3-export">2.4. Bước 4: Kho Lưu trữ Cá nhân &amp; Xuất bản PDF (My Library &amp; S3 Export)</h4>
+<ol>
+<li><strong>Truy vấn danh sách:</strong> Chuyển sang tab <strong>Thư Viện Của Tôi</strong>. Hệ thống tự động truy vấn các câu đố do chính Giáo viên Mai tạo (bao gồm câu đố <code>&quot;Trái Đất&quot;</code> vừa lưu ở Bước 2).
+<img src="http://localhost:1313/AWS_INTERN/images/5-Workshop/5.12-Web-Interface/test_library_list.png" alt="Thư viện câu đố cá nhân"></li>
+<li><strong>Xuất bản tài liệu qua Amazon S3:</strong>
+<ul>
+<li>Nhấp chọn nút <strong>🖨️ Xuất PDF / In câu đố</strong> trên thẻ câu đố <code>&quot;Trái Đất&quot;</code>.</li>
+<li>Trình duyệt kích hoạt lệnh yêu cầu <strong>S3 Presigned URL</strong> và mở hộp thoại in tài liệu / xem trước PDF chuẩn hóa phục vụ việc giảng dạy trực tiếp.
+<img src="http://localhost:1313/AWS_INTERN/images/5-Workshop/5.12-Web-Interface/test_library_export.png" alt="Xuất tài liệu in ấn PDF">
+<img src="http://localhost:1313/AWS_INTERN/images/5-Workshop/5.12-Web-Interface/test_library_export_PDF.png" alt="Xuất tài liệu in ấn PDF"></li>
+</ul>
+</li>
+</ol>
+<h4 id="25-giao-diện-phụ-trợ-chế-độ-tối-dark-mode">2.5. Giao diện phụ trợ: Chế độ Tối (Dark Mode)</h4>
+<p>Ứng dụng hỗ trợ Dark Mode đầy đủ thông qua CSS Variables để giảm mỏi mắt cho giáo viên và trẻ em khi dùng vào ban đêm.
+<img src="http://localhost:1313/AWS_INTERN/images/5-Workshop/5.12-Web-Interface/riddle_dark_mode.png" alt="Dark Mode"></p>
+<hr>
+<h3 id="3-các-tính-năng-phát-triển-trong-tương-lai-future-development">3. Các Tính năng Phát triển trong Tương lai (Future Development)</h3>
+<p>Mặc dù dự án đã hoàn thành các mục tiêu cốt lõi của Workshop, các tính năng sau đây được hoạch định phát triển trong tương lai để tối ưu hóa sản phẩm thương mại:</p>
+<ul>
+<li><strong>Tích hợp Xác thực Cognito thực tế:</strong> Thay thế luồng mô phỏng Cognito nội bộ bằng thư viện <code>@aws-amplify/auth</code> hoặc SDK chính thức <code>amazon-cognito-identity-js</code> nhằm quản lý phiên đăng nhập thực tế, bảo mật bằng JWT Token và lưu trữ token an toàn trong Cookie/LocalStorage.</li>
+<li><strong>Liên kết API Gateway &amp; DynamoDB thực:</strong> Chuyển đổi toàn bộ cơ chế mô phỏng dữ liệu (Mock DB Client) sang tích hợp API Gateway HTTP API thông qua việc cấu hình tệp môi trường <code>.env</code> (<code>REACT_APP_API_URL</code>). Lúc này, mọi yêu cầu tạo, lưu, upvote câu đố sẽ tương tác trực tiếp với dữ liệu sống trên Cloud AWS.</li>
+<li><strong>Tính năng Game hóa (Gamification) cho trẻ em:</strong> Phát triển giao diện giải đố tương tác cho học sinh, tích hợp tính năng tính điểm, giới hạn thời gian trả lời và bảng xếp hạng (Leaderboard) để kích thích sự hứng thú học tập của trẻ.</li>
+<li><strong>Xuất bản tài liệu PDF/Word hàng loạt:</strong> Mở rộng backend Lambda tích hợp các thư viện xử lý tài liệu mạnh mẽ hơn như <code>pdfkit</code> hoặc <code>docx</code> để hỗ trợ Giáo viên tải về hàng loạt danh sách câu đố theo chủ đề chỉ với một cú nhấp chuột.</li>
+<li><strong>Dashboard Phân tích cho Giáo viên (Analytics Dashboard):</strong> Cấu hình AWS QuickSight hoặc xây dựng Dashboard biểu đồ ngay trên frontend hiển thị thống kê độ tuổi học sinh truy cập, chủ đề câu đố được tạo nhiều nhất và tỷ lệ giải đố thành công.</li>
+</ul>
+<hr>
+<h3 id="4-đánh-giá-tổng-kết-sản-phẩm">4. Đánh giá Tổng kết Sản phẩm</h3>
+<ul>
+<li><strong>Tính toàn vẹn của Kiến trúc (End-to-End Serverless):</strong> Giao diện liên kết mượt mà với các giả lập thiết kế Single-Table Design trong DynamoDB, các luồng bảo mật của Cognito, và quản lý S3, phản ánh đúng logic nghiệp vụ được cấu hình trên AWS Cloud.</li>
+<li><strong>Trải nghiệm Người dùng (UX/UI):</strong> Phong cách Glassmorphism sang trọng, trực quan, dễ sử dụng cho các đối tượng giáo viên và phụ huynh. Thời gian phản hồi và chuyển đổi trang gần như tức thời nhờ cơ chế Single-Page Application.</li>
+<li><strong>Khả năng mở rộng:</strong> Cấu trúc mã nguồn React được mô đun hóa cao, dễ dàng mở rộng thêm các tính năng như trò chơi giải đố tương tác trực tiếp hoặc tính năng chấm điểm học sinh trong tương lai.</li>
+</ul>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.11-cognito/" title="Cấu hình Amazon Cognito làm Authorizer"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.13-cleanup/" title="Dọn dẹp tài nguyên" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="http://localhost:1313/AWS_INTERN/js/clipboard.min.js?1784591278"></script>
+    <script src="http://localhost:1313/AWS_INTERN/js/perfect-scrollbar.min.js?1784591278"></script>
+    <script src="http://localhost:1313/AWS_INTERN/js/perfect-scrollbar.jquery.min.js?1784591278"></script>
+    <script src="http://localhost:1313/AWS_INTERN/js/jquery.sticky.js?1784591278"></script>
+    <script src="http://localhost:1313/AWS_INTERN/js/featherlight.min.js?1784591278"></script>
+    <script src="http://localhost:1313/AWS_INTERN/js/highlight.pack.js?1784591278"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="http://localhost:1313/AWS_INTERN/js/modernizr.custom-3.6.0.js?1784591278"></script>
+    <script src="http://localhost:1313/AWS_INTERN/js/learn.js?1784591278"></script>
+    <script src="http://localhost:1313/AWS_INTERN/js/hugo-learn.js?1784591278"></script>
+    
+        
+            <script src="http://localhost:1313/AWS_INTERN/mermaid/mermaid.js?1784591278"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>

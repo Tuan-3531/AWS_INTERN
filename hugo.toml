@@ -1,6 +1,6 @@
-baseURL = "/"
+baseURL = "https://tuan-3531.github.io/AWS_INTERN/"
 relativeURLs = false
-canonifyURLs = false
+canonifyURLs = true
 defaultContentLanguage = "en"
 
 
@@ -8,6 +8,7 @@ theme = "hugo-theme-learn"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
+page = ["HTML", "RSS"]
 
 [params]
   themeVariant = "blue"
@@ -32,3 +33,37 @@ weight = 2
 label = "Tiếng Việt"
 
 [[Languages.vi.menu.shortcuts]]
+
+
+  
+
+[[Languages.en.menu.shortcuts]]
+  name = "<i class='fab fa-facebook fa-fw'></i> AWS Study Group - Blog-1"
+  url = "https://www.facebook.com/groups/660548818043427/user/100015108252190"
+  weight = 10
+
+[[Languages.vi.menu.shortcuts]]
+  name = "<i class='fab fa-facebook fa-fw'></i> AWS Study Group - Blog-1"
+  url = "https://www.facebook.com/groups/660548818043427/user/100015108252190"
+  weight = 10
+
+[[Languages.en.menu.shortcuts]]
+  name = "<i class='fab fa-facebook fa-fw'></i> AWS Study Group - Blog-2"
+  url = "https://web.facebook.com/groups/660548818043427/user/100029043690648"
+  weight = 10
+
+[[Languages.vi.menu.shortcuts]]
+  name = "<i class='fab fa-facebook fa-fw'></i> AWS Study Group - Blog-2"
+  url = "https://web.facebook.com/groups/660548818043427/user/100029043690648"
+  weight = 10
+
+
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
