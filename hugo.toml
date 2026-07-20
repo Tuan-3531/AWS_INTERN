@@ -1,0 +1,34 @@
+baseURL = "/"
+relativeURLs = false
+canonifyURLs = false
+defaultContentLanguage = "en"
+
+
+theme = "hugo-theme-learn"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[params]
+  themeVariant = "blue"
+  editURL = ""
+  description = ""
+  author = "dangquoctuan12t1nh2022@gmail.com"
+  showVisitedLinks = true
+  disableBreadcrumb = false
+  disableNextPrev = false
+
+[Languages]
+[Languages.en]
+title = "Internship Report"
+weight = 1
+label = "English"
+
+[[Languages.en.menu.shortcuts]]
+
+[Languages.vi]
+title = "Báo cáo thực tập"
+weight = 2
+label = "Tiếng Việt"
+
+[[Languages.vi.menu.shortcuts]]
