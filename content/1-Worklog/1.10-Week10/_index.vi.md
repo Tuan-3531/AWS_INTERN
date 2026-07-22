@@ -1,7 +1,7 @@
 ---
 title: "Worklog Tuần 10"
 date: 2024-01-01
-weight: 2
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
@@ -10,48 +10,23 @@ pre: " <b> 1.10. </b> "
 
 ### Mục tiêu tuần 10:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tập trung làm đồ án
+* Tìm hiểu Route 53 
+* CloudFront & AWS WAF 
+* Làm module 4- lab 57
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------------------------- | ------------ | --------------- | -------------- |
+| 2   | Khởi tạo và tạo trigger cho Lambda       | 29/06/2026   | 29/06/2026      |      |
+| 3   | Viết mã nguồn cho Lambda       | 30/06/2026   | 30/06/2026      |       |
+| 4   | TÌm hiểu Router 53 và cách làm module 4- lab 57   | 01/07/2026   | 01/07/2026      | <https://cloudjourney.awsstudygroup.com/>   |
+| 5   | Tìm hiểu về CloudFront và AWS WAF  | 02/07/2026   | 02/07/2026      | <https://cloudjourney.awsstudygroup.com/>   |
+| 6   | Thực hành module 4 - lab 57    | 03/07/2026   | 03/07/2026      | <https://cloudjourney.awsstudygroup.com/>  |
 
 
 ### Kết quả đạt được tuần 10:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Triển khai Serverless với AWS Lambda: Khởi tạo thành công hàm Lambda, cấu hình bộ kích hoạt (trigger) tự động và hoàn thiện mã nguồn xử lý.
+* Nghiên cứu hạ tầng mạng & bảo mật (Route 53, CloudFront & AWS WAF): Nắm vững cách quản lý tên miền với Amazon Route 53, mạng phân phối nội dung Amazon CloudFront và các giải pháp bảo mật tường lửa ứng dụng web với AWS WAF.
+* Thực hành thành công Module 4 - Lab 57: Học kỹ quy trình các bước hướng dẫn và hoàn thành triển khai thực hành bài Lab 57 nâng cao thuộc Module 4

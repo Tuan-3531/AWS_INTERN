@@ -1,7 +1,7 @@
 ---
 title: "Worklog Tuần 9"
 date: 2024-01-01
-weight: 1
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
@@ -9,48 +9,24 @@ pre: " <b> 1.9. </b> "
 
 ### Mục tiêu tuần 9:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu module 5
+* Tìm hiểu về AWS Amplify Hosting
+* Làm lab 14, 24
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+| Thứ | Công việc                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------------------------- | ------------ | --------------- | -------------- |
+| 2   | Tìm hiểu module 5     | 15/06/2026   | 15/06/2026      | <https://cloudjourney.awsstudygroup.com/>       |
+| 3   | Tìm hiểu về AWS Amplify Hosting        | 16/06/2026   | 16/06/2026      | <https://cloudjourney.awsstudygroup.com/>      |
+| 4   | Tìm hiểu cách làm lab 14 và 24    | 17/06/2026   | 17/06/2026      | <https://cloudjourney.awsstudygroup.com/>   |
+| 5   | thực hành lap 14, 24 | 18/06/2026   | 18/06/2026      | <https://cloudjourney.awsstudygroup.com/>   |
+| 6   | Tiếp tục tìm hiểu module 5    | 19/06/2026   | 19/06/2026      | <https://cloudjourney.awsstudygroup.com/>  |
 
 
 ### Kết quả đạt được tuần 9:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
+* Tiến độ Module 5: Tiếp thu và nắm vững các nội dung trọng tâm ban đầu của Module 5 trên hệ thống Cloud Journey.
+* Nghiên cứu AWS Amplify Hosting: Hiểu rõ cơ chế triển khai (deployment) và quản trị web/front-end ứng dụng hiện đại thông qua dịch vụ AWS Amplify Hosting.
+* Thực hành thành công bài Lab 14 & Lab 24: Học kỹ quy trình các bước hướng dẫn và hoàn thành triển khai thực hành cho cả 2 bài Lab 14 và Lab 24
 

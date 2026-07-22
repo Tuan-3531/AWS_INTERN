@@ -13,26 +13,18 @@ I started my internship on April 17, 2026, as a Cloud Engineer Intern, completin
 This internship was designed to expose us to a professional working environment, allowing us to apply our theoretical knowledge to real-world scenarios while honing our practical skills in the field of cloud computing.
 
 
-**Week 1:** [Getting familiar with AWS and basic AWS services](1.1-week1/)
+| Week  | Time          |  Learning topic                                                                                              | 
+| ------| --------------| -------------------------------------------------------------------------------------------------------------|
+|[Week 1](1.1-Week1/_index.md)| 20/04 - 24/04 | AWS Exploration, Familiarization, and Team Formation                                   |
+|[Week 2](1.2-Week2/_index.md)| 27/04 - 01/05 | Study Module 1 and complete Labs 1, 7, and 9                                           |
+|[Week 3](1.3-Week3/_index.md)| 04/05 - 08/05 | Study Module 2, research BMAD, and learn how to draw architecture diagrams             |
+|[Week 4](1.4-Week4/_index.md)| 11/05 - 15/05 | Study Module 3, complete Labs 3 and 10, and search for a capstone project topic        |
+|[Week 5](1.5-Week5/_index.md)| 18/05 - 22/05 | Learn about AWS Lambda and API Gateway, and complete Module 2 - Lab 19                 |
+|[Week 6](1.6-Week6/_index.md)| 25/05 - 29/05 | Learn about AWS Bedrock and complete Labs 20 and 13  |
+|[Week 7](1.7-Week7/_index.md)| 01/06 - 05/06 | Study Module 4, research DynamoDB, and complete Lab 24 |
+|[Week 8](1.8-Week8/_index.md)| 08/06 - 12/06 | Learn about S3 storage and Presigned URLs, and complete Module 3 - Lab 57 |
+|[Week 9](1.9-Week9/_index.md)| 15/06 - 19/06 | Study Module 5, research AWS Amplify Hosting, create IAM users, and complete Labs 14, 24 |
+|[Week 10](1.10-Week10/_index.md)| 22/06 - 26/06 | Focus the project, research Route 53, CloudFront, and AWS WAF, and complete Module 4 - Lab 57|
+|[Week 11](1.11-Week11/_index.md)| 29/06 - 03/07 | Keep working on the capstone project, learn Module 6, do Lab 53, and take photos of the deployment documents |
+|[Week 12](1.12-Week12/_index.md)| 06/07 - 10/07 | Finalize the project, study Module 7, and write the template |
 
-**Week 2:** [Doing task A...](1.2-week2/)
-
-**Week 3:** [Doing task B...](1.3-week3/)
-
-**Week 4:** [Doing task C...](1.4-week4/)
-
-**Week 5:** [Doing task D...](1.5-week5/)
-
-**Week 6:** [Doing task E...](1.6-week6/)
-
-**Week 7:** [Doing task G...](1.7-week7/)
-
-**Week 8:** [Doing task H...](1.8-week8/)
-
-**Week 9:** [Doing task I...](1.9-week9/)
-
-**Week 10:** [Doing task L...](1.10-week10/)
-
-**Week 11:** [Doing task M...](1.11-week11/)
-
-**Week 12:** [Doing task N...](1.12-week12/)

@@ -6,121 +6,112 @@ chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+# Event Review: June 13th Tech Event
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+### Purpose of the Event
 
-### Event Objectives
-
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- Career orientation and sharing personal growth journeys in the Information Technology industry.
+- Analyze a real-world system architecture (Case study: URL Shortener Application) on Cloud computing platforms.
+- Provide in-depth insights into the Data Analytics industry and the career path across levels.
+- Understand the recruitment workflow, culture of Multinational Corporations (MNCs), and work philosophy.
+- Present the realistic view of a DevOps Engineer compared to theoretical concepts.
 
 ### Speakers
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+- **Mr. Danh Hoang Hieu Nghi** - Topic: Career journey and identifying users' actual pain points.
+- **Mr. Trung Kien (Leader) & Mr. Nguyen Minh Tho** - Topic: System Architecture Analysis of a URL Shortener project.
+- **Mr. Dat Pham** - Topic: Data Analytics and Career mindset roadmap.
+- **Mr. Nguyen Cuong** - Topic: Corporate culture (MNC) and the "Right Job" philosophy.
+- **Mr. Trong H. Truong (DevOps at Endava)** - Topic: What does a DevOps Engineer really do?
 
 ### Key Highlights
 
-#### Identifying the drawbacks of legacy application architecture
+#### Career Journey & Problem Solving (Mr. Hieu Nghi)
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+- **Orientation**: Sharing about personal development and career growth in the tech field.
+- **Mindset**: Emphasized the importance of deep-diving into the core problem to identify the user's actual difficulty. Only then can we propose an accurate, value-driven technical solution.
 
-#### Transitioning to modern application architecture – Microservices
+#### URL Shortener Architecture (Mr. Trung Kien & Mr. Minh Tho)
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+- **Solving Bottlenecks**: Defined system issues when handling high traffic loads and how to use cloud services to solve them.
+- **Core 3-tier System Architecture**:
+    - **Frontend & Edge Layer**: Seamless combination of Amazon CloudFront, AWS WAF, and AWS Amplify.
+    - **Processing Layer (Compute & Cache)**: Used Amazon ECS to run shortener logic. Requests flow from ECS to ElastiCache (Redis).
+    - **Database Layer**: Queries directed to Amazon DynamoDB.
+- **Cache-aside pattern**: When a link-retrieval request arrives, the system checks ElastiCache first (returning immediately on a cache hit). On a cache miss, the system queries DynamoDB, retrieves the link, and writes it back to ElastiCache.
+- **4 Architectural Benefits**:
+    1. Separation of concerns (Clear separation of logic).
+    2. Defense at the edge (Security implemented via WAF & CloudFront).
+    3. Pre-computation (Data calculated in advance).
+    4. Cache-aside pattern (Optimized cache lookup flow).
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+#### Data Analytics & MNC Culture (Mr. Dat Pham & Mr. Nguyen Cuong)
 
-#### Domain-Driven Design (DDD)
+##### Part 1: Data Analytics (Mr. Dat Pham)
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+- **Role**: Preparing weekly reports, finding root causes, communicating with departments. Cost analysis (detail, risk) and business metrics (order conversion rate).
+- **Core Skills**: Critical thinking, communication skills, data storytelling, and a growth mindset.
+- **Mindset**: Explain things from the perspective of someone who knows nothing about technology. Truly understand what the numbers represent in the real world.
+- **5 Levels of Career Progression**:
+    - Follower: Intern, needs task-by-task guidance.
+    - Learner: Understands work but still needs supervision.
+    - Problem Solver: Can handle assigned tasks independently.
+    - System Thinker: Looks at the problem globally (e.g., how a new regulation impacts the company).
+    - Super Star: Builds system vision, maps out long-term strategy, and positions the business.
 
-#### Event-Driven Architecture
+##### Part 2: MNC Culture & "Right Job" Philosophy (Mr. Nguyen Cuong)
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+- **MNC Recruitment**: 4 rounds (Resume screening/Pre-screening -> Competency test -> Technical interview -> Culture fit evaluation).
+- **Corporate Culture**: The sum of "ways of thinking, ways of living, ways of working" towards the tasks of all members.
+- **Integration Context**: Analyzed milestones in Vietnam (1975-1986 isolation, 1986-1995 Doi Moi, 1997 Internet & joining WTO). Emphasized that Vietnam needs to move toward international standards, especially by avoiding any loss of data security credibility.
+- **"Right Job" Philosophy (based on the book by Dr. Gian Tu Trung)**:
+    - Being a human: Kindness (Social domain).
+    - Doing a job: Solving real-world problems with a service spirit (Economic domain).
+    - Being a citizen: Responsibility to the nation, carrying the country's destiny (Political domain).
 
-#### Compute Evolution
+#### Reality of DevOps (Mr. Trong H. Truong)
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+- **Why choose DevOps**: Cool, good income, high employment potential. Compared to the rise of AI, DevOps still holds a vital position.
+- **Reality vs. Theory**: Learning theory is creating code, CI/CD, Docker, fixing bugs at midnight. In reality, depending on company scale (Startup vs. Enterprise), workload varies. In startups, members often have to work cross-field and wear multiple hats.
+- **Toolbox (Tools)**: Must learn broadly from Linux, Network, Git, coding languages, CI/CD to Containers. However, tools change constantly.
+- **Vital DevOps Mindset**:
+    - Double check copy-pasted code; learn from real-world failures.
+    - Communication is key (know how to talk to other teams).
+    - DevOps is not a helper department that runs around fixing everything! They need space to resolve incidents that happen suddenly.
+    - System thinking (System Thinker) instead of focusing on tasks. Build clean, readable systems.
+    - Use AI to boost productivity, do not let your brain get lazy.
+- Shared his own journey of building a product to accumulate experience.
 
-#### Amazon Q Developer
+### Lessons Learned
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+#### Design & Technical Mindset
 
-### Key Takeaways
+- Mastered the Cache-aside architecture and the power of Separation of Concerns.
+- Understood the importance of "Defense at the edge" by blocking malicious traffic at the CDN and WAF layers instead of letting them hit the backend compute.
+- Understood that in Data, numbers are lifeless without a "storyteller". Always put yourself in the end-user's shoes to understand what numbers represent.
 
-#### Design Mindset
+#### Soft Skills & Career Path
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+- Career growth is not just about technical skills (coding/tooling) but depends on shifting from a Problem Solver mindset to a System Thinker mindset.
+- Communication is a survival skill in both Data Analytics and DevOps to bridge departments, resolve conflicts, and unify workflows.
+- Core principle: Learn to use AI to optimize work processing efficiency without relying on it so much that you lose core thinking.
 
-#### Technical Architecture
+#### Application to Work
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
-
-#### Modernization Strategy
-
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
-
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+- **Applying "Defense at the Edge"**: Configured AWS WAF combined with Amazon CloudFront and Amplify to protect the static frontend app, blocking DDoS and Prompt Injection before requests reach API Gateway.
+- **Backend Optimization Mindset**: Leveraging DynamoDB for storage and auto-scaling Lambda for compute implements the Separation of Concerns principle, aligning with the speakers' analysis.
+- **Developing as a System Thinker**: When building architecture, instead of completing isolated tasks, I look at the overall data flow (Route 53 -> Frontend -> API Gateway -> Lambda -> DynamoDB/Bedrock) to manage errors holistically, raising myself from Learner to Problem Solver/System Thinker.
+- **Mindset for the Work Environment**: Better understand the MNC culture and the "Right Job" philosophy to enhance professionalism during the internship.
 
 ### Event Experience
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
-
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
-
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
-
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+- The event provided practical, real-world perspectives rarely discussed in university classrooms. The most impressive part was the seamless connection between theory and AWS architecture in the URL Shortener case study, illustrating the power of cloud computing for high-traffic systems.
+- Furthermore, the sessions on Data Analytics and DevOps broke my naive perceptions. I realized that whether analyzing data or operating infrastructure, the defining factors for success are **Communication** and **System Thinking**. The concept of working with a "service spirit" and the "Right Job" philosophy serve as valuable guidelines, helping me reshape my work attitude and build high responsibility for any line of code or design diagram I create.
 
 #### Some event photos
-*Add your event photos here*  
 
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+![Event Photo](/images/4-EventParticipated/Event2/1783679263617_118571171431119328_g2710655335341090523_88121a123a90aa42bd6a7d6b606595ce.jpg)
+![Event Photo](/images/4-EventParticipated/Event2/1783679263622_118571171431119328_g2710655335341090523_acbde0923b02fe0cc5322e38e358e398.jpg)
+![Event Photo](/images/4-EventParticipated/Event2/1783679263626_118571171431119328_g2710655335341090523_3163d5fa6c753f52282132d7523da0f4.jpg)
+![Event Photo](/images/4-EventParticipated/Event2/1783679263630_118571171431119328_g2710655335341090523_f29790f1ac468a56789b01ab3f9c1795.jpg)
+

@@ -9,22 +9,22 @@ pre: " <b> 1.5. </b> "
 
 ### Mục tiêu tuần 5:
 
-* Tiếp tục hoàn thiện Module 3.
-* Tìm hiểu về AWS Budgets.
-* Học cách quản lý ngân sách và chi phí.
+* Tìm hiểu AWS Lambda 
+* Tìm hiểu API Gateway 
+* Làm module 2 - lab 19
 
 ### Các công việc cần triển khai trong tuần này:
 
 | Thứ | Công việc                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --------------------------- | ------------ | --------------- | -------------- |
-| 2   | Tiếp tục học Module 3       | 18/05/2026   | 18/05/2026      | AWS Docs       |
-| 3   | Tìm hiểu AWS Budgets        | 19/05/2026   | 19/05/2026      | AWS Docs       |
-| 4   | Tạo ngân sách thử nghiệm    | 20/05/2026   | 20/05/2026      | AWS Practice   |
-| 5   | Thiết lập cảnh báo chi tiêu | 21/05/2026   | 22/05/2026      | AWS Practice   |
-| 6   | Theo dõi usage và chi phí   | 23/05/2026   | 23/05/2026      | Internal Docs  |
+| 2   | Tìm hiểu về AWS Lambda      | 18/05/2026   | 18/05/2026      |<https://cloudjourney.awsstudygroup.com/> |
+| 3   | Tìm hiểu về API Gateway        | 19/05/2026   | 19/05/2026      | <https://cloudjourney.awsstudygroup.com/>|
+| 4   | Tiếp tục học Module 3    | 20/05/2026   | 20/05/2026      |<https://cloudjourney.awsstudygroup.com/>|
+| 5   | Học cách làm lab 19 | 21/05/2026   | 21/05/2026      |<https://cloudjourney.awsstudygroup.com/>|
+| 6   | Thực hành lab 19    | 22/05/2026   | 22/05/2026      |  |
 
 ### Kết quả đạt được tuần 5:
 
-* Hiểu cách quản lý ngân sách AWS.
-* Thiết lập thành công budget alerts.
-* Theo dõi được mức tiêu thụ tài nguyên.
+* Nắm vững dịch vụ Serverless cơ bản: Hiểu rõ khái niệm, kiến trúc và cách thức hoạt động của AWS Lambda (Serverless Compute) và Amazon API    Gateway từ tài liệu chính thức AWS Docs.
+* Củng cố kiến thức Module 3: Hoàn thành các phần học tiếp theo của Module 3 trên hệ thống AWS Practice.
+* Thực hành thành công Lab 19: Tiếp thu quy trình hướng dẫn và triển khai hoàn chỉnh bài Lab 19 dựa trên tài liệu hướng dẫn nội bộ (Internal Docs).

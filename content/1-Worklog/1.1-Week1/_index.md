@@ -12,38 +12,23 @@ pre: " <b> 1.1. </b> "
 * Get familiar with the internship environment and working process.
 * Learn the fundamental concepts of AWS.
 * Set up an AWS account for upcoming practical sessions.
+* Do Explore AWS task to earn points
 
 ### Tasks to be carried out this week:
 
-| Day | Task                                                                                                                 | Start Date | Completion Date | Reference Material         |
-| --- | -------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | -------------------------- |
-| 2   | - Get acquainted with team members <br> - Learn about the internship process and company regulations                 | 20/04/2026 | 20/04/2026      | Internal Company Materials |
-| 3   | - Learn the overview of AWS <br> - Study the main service groups: Compute, Storage, Networking, Database             | 21/04/2026 | 21/04/2026      | AWS Documentation          |
-| 4   | - Create an AWS account <br> - Explore the AWS Management Console interface <br> - Configure basic security settings | 22/04/2026 | 22/04/2026      | AWS Documentation          |
-| 5   | - Learn about Amazon EC2 <br> - Understand its components: Instance, AMI, EBS, Security Group, Key Pair              | 23/04/2026 | 24/04/2026      | AWS Documentation          |
-| 6   | - Practice launching an EC2 instance <br> - Connect to EC2 via SSH <br> - Verify server operation                    | 25/04/2026 | 25/04/2026      | AWS Practice Lab           |
+| Day | Task                                                                                 | Start Date | Completion Date | Reference Material         |
+| --- | -------------------------------------------------------------------------------------| ---------- | -----------| -------------------------|
+| 2   | Learn about and set up an AWS accoun                                                | 20/04/2026 | 20/04/2026 |Internal Company Materials|
+| 3   | Complete 5 AWS exploration tasks <br> - Gain an overview of AWS                     | 21/04/2026 | 21/04/2026 | <https://cloudjourney.awsstudygroup.com/>  |
+| 4   | Find teammates and form a group <br> - Explore the AWS Management Console interface | 22/04/2026 | 22/04/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | Research commonly used AWS services	                                             | 23/04/2026 | 23/04/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | Connect with mentors <br> - Learn internship procedures and company regulations    | 24/04/2026 | 24/04/2026 |                   |
+
 
 ### Week 1 Achievements:
 
-* Understood the working model and internship process at the company.
-
-* Gained fundamental knowledge of Amazon Web Services.
-
-* Learned the main AWS service groups:
-
-  * Compute
-  * Storage
-  * Networking
-  * Database
-
-* Successfully created an AWS account and became familiar with the AWS Management Console.
-
-* Understood the working principles of Amazon EC2.
-
-* Successfully practiced:
-
-  * Launching an EC2 instance
-  * Connecting via SSH
-  * Checking instance status
-
-* Built a solid foundation for learning more advanced AWS services in the following weeks.
+* Account Setup & Documentation Onboarding: Successfully created an AWS account and reviewed initial internal guidelines.
+* AWS Fundamentals & Practical Hands-on: Completed 5 exploration tasks on AWS Practice Lab, building a foundational understanding of AWS cloud services.
+* Console Familiarization & Team Formation: Navigated and became accustomed to the AWS Management Console; successfully connected with peers to form a working team.
+* Core Services Research: Self-studied official AWS Documentation to understand key functionality and use cases of core AWS services.
+* Workplace Integration: Connected with mentors and thoroughly understood the internship workflow, company rules, and workplace culture.

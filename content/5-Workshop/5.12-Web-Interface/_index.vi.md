@@ -8,112 +8,106 @@ pre: " <b> 5.12. </b> "
 
 ### Kiểm thử Giao diện Người dùng & Báo cáo Ứng dụng Web AI Riddle Generator
 
-Sau khi hoàn tất cấu hình toàn bộ hạ tầng backend Serverless trên AWS (bao gồm DynamoDB, S3, Lambda, API Gateway, Cognito, và Amplify), bước cuối cùng là truy cập và nghiệm thu ứng dụng web frontend hoàn chỉnh. 
+Sau khi hoàn tất cấu hình hạ tầng backend Serverless trên AWS, bước cuối cùng là truy cập và nghiệm thu ứng dụng web frontend hoàn chỉnh. 
 
-Ứng dụng được thiết kế theo cấu trúc **Single-Page Application (SPA)** phát triển trên nền tảng **React 19** kết hợp với công cụ đóng gói siêu tốc **Vite 8**. Giao diện áp dụng phong cách thiết kế **Glassmorphism** (giao diện kính mờ) hiện đại, hỗ trợ đầy đủ các hiệu ứng chuyển đổi mượt mà và khả năng đáp ứng (responsive layout) tốt trên mọi thiết bị.
+Ứng dụng được thiết kế theo cấu trúc **Single-Page Application (SPA)** phát triển trên nền tảng **React 19** kết hợp với công cụ đóng gói **Vite 8**. Giao diện áp dụng phong cách thiết kế **Glassmorphism** (kính mờ) hiện đại, hỗ trợ hiệu ứng chuyển đổi mượt màng và giao diện tương thích tốt trên mọi thiết bị.
 
----
 
-### 1. Chi tiết Các Phân hệ Chức năng trên Giao diện
-
-Ứng dụng web được chia thành các phân hệ chức năng tương ứng với các menu điều hướng chính:
-
-#### 1.1. Phân hệ Tạo Câu Đố (Generator Hub)
-Nơi người dùng (Giáo viên, Phụ huynh) tương tác trực tiếp với mô hình Trí tuệ nhân tạo (AI):
-*   **Các bộ lọc cấu hình:** 
-    *   *Độ tuổi:* Phân loại theo cấp học (Cấp 1, Cấp 2, Cấp 3) để AI tự điều chỉnh từ vựng và độ khó phù hợp với tư duy trẻ em.
-    *   *Thể loại câu đố:* Hỗ trợ câu đố ghép chữ đầu từ khóa (Acrostic) hoặc câu đố tư duy logic (Lịch sử - Văn học, Khoa học - Toán học).
-    *   *Chủ đề:* Địa lý, Khoa học, Lịch sử, Động vật, Thực vật...
-*   **Cơ chế sinh câu đố:** Người dùng nhập một "Từ khóa" (Keyword). Khi nhấn nút tạo, hệ thống gửi payload đến API Gateway. Trình diễn kết quả bao gồm: nội dung câu đố, các gợi ý (Hint 1, Hint 2) và Đáp án được che giấu dưới dạng collapsible (nhấp vào để hiển thị).
-*   **Tính năng lưu trữ:** Nếu đã đăng nhập, nút **"Lưu Vào Thư Viện"** sẽ xuất hiện cho phép lưu trữ câu đố trực tiếp vào cơ sở dữ liệu DynamoDB.
-
-#### 1.2. Phân hệ Cộng Đồng (Community Board)
-Bảng tin hiển thị các câu đố được chia sẻ công khai bởi các thành viên:
-*   **Sắp xếp nổi bật (Featured Sorting):** Áp dụng cấu trúc chỉ mục phụ **GSI1 (Global Secondary Index)** trong DynamoDB để sắp xếp các câu đố theo số lượt bình chọn (Upvotes) giảm dần.
-*   **Bình chọn (Upvoting):** Cơ chế kiểm soát chặt chẽ, người dùng đăng nhập chỉ được bình chọn tối đa một lần cho mỗi câu đố. Lượt bình chọn sẽ được cập nhật thời gian thực lên giao diện.
-*   **Sao chép nhanh:** Cho phép người dùng lưu nhanh bất kỳ câu đố cộng đồng nào về thư viện cá nhân của mình.
-
-#### 1.3. Phân hệ Thư Viện Của Tôi (Personal Library)
-Kho lưu trữ cá nhân của riêng tài khoản đang đăng nhập:
-*   **Quản lý danh sách:** Truy vấn DynamoDB theo khóa phân vùng (Partition Key - PK) `USER#<UserId>` và bắt đầu bằng khóa sắp xếp (Sort Key - SK) `RIDDLE#` để lấy ra danh sách câu đố mà tài khoản đó tự tạo.
-*   **Xuất tài liệu (Document Export):** Nút xuất file PDF/Word liên kết trực tiếp với Amazon S3. Khi người dùng click, hệ thống yêu cầu một **S3 Presigned URL** có thời hạn ngắn để tải xuống tài liệu câu đố chất lượng cao, phục vụ cho việc in ấn giảng dạy trên lớp.
-
-#### 1.4. Phân hệ Xác thực Người dùng (Cognito Authentication)
-Cổng đăng nhập và đăng ký tích hợp hệ thống bảo mật:
-*   **Đăng ký tài khoản:** Phân chia rõ ràng vai trò **Giáo viên (Teacher)** hoặc **Phụ huynh (Parent)** nhằm gán các quyền IAM (Identity and Access Management) tương thích.
-*   **Giả lập đăng nhập nhanh:** Cung cấp các cấu hình tài khoản mẫu (Teacher Nguyễn Thị Mai, Parent Trần Văn Thu) để thuận tiện cho việc kiểm thử phân quyền ngay trên trình duyệt.
+> **Hiện trạng tích hợp hệ thống:**
+> *   **Chức năng hoạt động thực tế (Real Integration):** Các phân hệ **Đăng nhập (Cognito)**, **Tạo Câu Đố (Generator)**, và **Thư viện cá nhân (Library)** đã được tích hợp hoạt động thực tế 100%. Đăng nhập đăng ký kết nối trực tiếp AWS Cognito User Pool qua SDK và giải mã JWT token tiếng Việt; Sinh câu đố gọi trực tiếp AWS Bedrock Claude 3.5 và tự động lưu/xóa thư viện đồng bộ xuống bảng DynamoDB Single-Table thông qua các API Gateway endpoints thực tế.
+> *   **Chức năng phát triển trong tương lai (Future Development):** Phân hệ **Cộng đồng (Community)** hiện tại được phát triển dưới dạng giao diện dữ liệu giả lập (Mock Data) và sẽ được tích hợp thực tế với DynamoDB Global Secondary Index (GSI) trên Cloud trong tương lai.
 
 ---
 
-### 2. Kịch bản Kiểm thử Thực tế Giao diện Web (Chi tiết từng bước)
+### 1. Kịch bản Kiểm thử Thực tế & Các Phân hệ Giao diện Web (Chi tiết từng bước)
 
-Dưới đây là kịch bản chạy thử nghiệm thực tế liên tục từ đầu đến cuối (End-to-End User Journey) của ứng dụng web được ghi nhận trực tiếp từ môi trường chạy thử nghiệm:
+Dưới đây là kịch bản chạy thử nghiệm thực tế liên tục từ đầu đến cuối (End-to-End User Journey) của ứng dụng web, kết hợp giới thiệu các phân hệ chức năng tương ứng trực tiếp dưới từng bước giao diện:
 
-#### 2.1. Bước 1: Khởi động & Luồng Đăng nhập (Authentication Flow)
-1. **Truy cập trang đăng nhập:** Người dùng truy cập trang chủ và nhấn chọn nút **Đăng nhập** ở góc trên bên phải. Hệ thống chuyển sang giao diện xác thực tích hợp AWS Cognito.
-   ![Đăng nhập Cognito](/images/5-Workshop/5.12-Web-Interface/test_login_page.png)
-2. **Xác thực nhanh:** Sử dụng cấu hình tài khoản Giáo viên mẫu `"Cô Nguyễn Thị Mai"` để thực hiện luồng đăng nhập giả lập.
-3. **Đăng nhập thành công:** Sau 2 giây, hệ thống trả về Token JWT và chuyển hướng về trang chủ. Góc phải màn hình hiển thị thông tin hồ sơ của tài khoản đang hoạt động.
-   ![Đăng nhập thành công](/images/5-Workshop/5.12-Web-Interface/test_login_success.png)
+#### 1.1. Phân hệ Xác thực Người dùng (Cognito Authentication) - *Tích hợp thực tế*
+*   **Mô tả chức năng:** Cổng xác thực và quản lý tài khoản người dùng kết nối trực tiếp với dịch vụ đám mây bảo mật **AWS Cognito User Pool** nhằm phục vụ việc phân quyền người dùng (gán vai trò Giáo viên - Teacher hoặc Phụ huynh - Parent) và bảo vệ an toàn các API endpoint phía sau.
+*   **Trạng thái tích hợp:** Đã tích hợp thực tế thành công 100%. Luồng hoạt động hoàn toàn tự động từ đăng ký, xác thực qua email cho đến đăng nhập và đồng bộ tài khoản:
+    1.  **Đăng ký tài khoản (Sign Up):** Nhập Họ tên, Email, Mật khẩu và Lựa chọn Vai trò (Giáo viên / Phụ huynh). Dữ liệu đăng ký được đẩy trực tiếp lên AWS Cognito User Pool.
+    2.  **Xác minh Email (Confirm Sign Up):** Hệ thống Cognito tự động gửi email chứa mã OTP xác thực. Trang web hiển thị giao diện nhập mã gồm 6 ô số riêng biệt, hỗ trợ tự động chuyển tiếp tiêu điểm (focus shift), xóa lùi thông minh và dán mã OTP.
+    3.  **Đăng nhập (Sign In):** Xác thực thông tin qua Cognito, nhận mã token JWT (ID Token, Access Token). Hệ thống giải mã JWT (tiếng Việt UTF-8 không lỗi phông chữ) để lấy thông tin cá nhân và hiển thị hồ sơ động ở góc màn hình.
+    4.  **Đồng bộ DynamoDB:** Hồ sơ đăng ký sau khi xác thực sẽ tự động được ghi nhận xuống bảng DynamoDB Single-Table thông qua hàm Lambda `/riddles/profile` để lưu trữ lâu dài.
+*   **Hình ảnh kiểm thử giao diện đăng nhập:**
+    ![Đăng nhập Cognito](/images/5-Workshop/5.13-Web-Interface/test_login_page.png)
+*   **Hình ảnh kiểm thử giao diện đăng ký tài khoản:**
+    ![Đăng ký tài khoản Cognito](/images/5-Workshop/5.13-Web-Interface/register.png)
+*   **Hình ảnh kiểm thử giao diện nhập mã xác thực OTP:**
+    ![Xác thực mã OTP](/images/5-Workshop/5.13-Web-Interface/verify.png)
+*   **Hình ảnh kiểm thử đăng nhập thành công:**
+    Góc phải màn hình hiển thị chính xác thông tin hồ sơ người dùng thực tế vừa đăng nhập cùng vai trò tương ứng để phân quyền:
+    ![Đăng nhập thành công](/images/5-Workshop/5.13-Web-Interface/test_login_success.png)
 
-#### 2.2. Bước 2: Tạo Câu Đố Với AI (Riddle Creation)
-1. **Nhập tham số cấu hình:** Tại tab **Tạo Câu Đố**, chúng tôi chọn chủ đề "Địa lý", cấp học "Cấp 1" và nhập từ khóa đáp án là `"Trái Đất"`.
-   ![Nhập từ khóa](/images/5-Workshop/5.12-Web-Interface/test_create_riddle_input.png)
-2. **Kích hoạt AI tạo câu đố:** Nhấn chọn nút **⚡ Tạo Câu Đố Với AI**. Hệ thống gửi yêu cầu qua API Gateway đến AWS Lambda để kích hoạt Amazon Bedrock LLM sinh câu đố thơ chữ đầu (Acrostic).
-3. **Hiển thị kết quả ban đầu:** Câu đố thơ Acrostic được kết xuất dưới định dạng Glassmorphism sang trọng với các gợi ý và đáp án ban đầu được ẩn kín.
-   ![Kết quả tạo câu đố](/images/5-Workshop/5.12-Web-Interface/test_create_riddle_result.png)
-4. **Mở gợi ý khái quát:** Nhấp chuột vào collapsible **💡 Gợi ý bước 1 (Khái quát)** để hiển thị gợi ý gợi mở tư duy đầu tiên cho trẻ.
-   ![Hiển thị Gợi ý 1](/images/5-Workshop/5.12-Web-Interface/test_create_riddle_hint.png)
-5. **Mở đáp án cuối cùng:** Nhấp chuột vào collapsible **🏆 XEM ĐÁP ÁN CUỐI CÙNG** để hiển thị chính xác từ khóa đáp án `"Trái Đất"`.
-   ![Hiển thị Đáp án](/images/5-Workshop/5.12-Web-Interface/test_create_riddle_answer.png)
-6. **Lưu trữ vào DynamoDB:** Giáo viên click chọn **Lưu Vào Thư Viện**. Hệ thống ghi dữ liệu xuống DynamoDB Table thông qua khóa phân vùng và khóa sắp xếp. Nút lưu chuyển sang trạng thái `⭐ Đã Lưu Vào Thư Viện`.
-   ![Lưu câu đố thành công](/images/5-Workshop/5.12-Web-Interface/test_create_riddle_saved.png)
+#### 1.2. Phân hệ Tạo Câu Đố (Generator Hub) - *Tích hợp thực tế*
+*   **Mô tả chức năng:** Nơi người dùng (Giáo viên, Phụ huynh) tương tác trực tiếp với mô hình Trí tuệ nhân tạo (AI). Người dùng có thể cấu hình độ tuổi (Cấp 1, Cấp 2, Cấp 3), thể loại (Acrostic, Lịch sử - Văn học, Khoa học - Toán học), chủ đề và nhập "Từ khóa" đáp án.
+*   **Trạng thái tích hợp:** Chức năng hoạt động thực tế, tích hợp trực tiếp qua API Gateway để gọi AWS Lambda và Amazon Bedrock LLM sinh câu đố theo từ khóa. Kết quả trả về gồm bài thơ đố, các gợi ý (khái quát/chi tiết) và đáp án ẩn dưới dạng collapsible. Nút "Lưu Vào Thư Viện" cho phép lưu cục bộ câu đố này vào LocalStorage của trình duyệt (giả lập thao tác lưu vào DynamoDB Table).
+*   **Hình ảnh kiểm thử cấu hình đầu vào:**
+    Nhập từ khóa `"Trái Đất"`, chọn chủ đề Địa lý, nhóm tuổi Cấp 1:
+    ![Nhập từ khóa](/images/5-Workshop/5.13-Web-Interface/test_create_riddle_input.png)
+*   **Hình ảnh kiểm thử kết quả tạo câu đố:**
+    Hệ thống hiển thị câu đố thơ Acrostic sinh từ AI dưới định dạng Glassmorphism sang trọng với các gợi ý và đáp án ban đầu được ẩn kín:
+    ![Kết quả tạo câu đố](/images/5-Workshop/5.13-Web-Interface/test_create_riddle_result.png)
+*   **Hình ảnh kiểm thử gợi ý khái quát:**
+    Khi nhấp chuột vào collapsible **💡 Gợi ý bước 1 (Khái quát)** để mở rộng khung nội dung gợi ý:
+    ![Hiển thị Gợi ý 1](/images/5-Workshop/5.13-Web-Interface/test_create_riddle_hint.png)
+*   **Hình ảnh kiểm thử đáp án cuối cùng:**
+    Khi nhấp chuột vào collapsible **🏆 XEM ĐÁP ÁN CUỐI CÙNG** để hiển thị chính xác từ khóa đáp án:
+    ![Hiển thị Đáp án](/images/5-Workshop/5.13-Web-Interface/test_create_riddle_answer.png)
+*   **Hình ảnh kiểm thử lưu trữ câu đố:**
+    Giáo viên click chọn **Lưu Vào Thư Viện**, dữ liệu được lưu xuống LocalStorage, nút lưu chuyển sang trạng thái đã lưu: `⭐ Đã Lưu Vào Thư Viện`.
+    ![Lưu câu đố thành công](/images/5-Workshop/5.13-Web-Interface/test_create_riddle_saved.png)
 
-#### 2.3. Bước 3: Tương tác Cộng đồng & Cơ chế Giải đố (Community Interactivity)
-Chuyển sang phân hệ **Cộng Đồng** nơi tổng hợp câu đố công khai của các thành viên:
-1. **Đoán đúng đáp án:**
-   * Tìm đến thẻ câu đố nổi bật về `"Bánh Chưng"`.
-   * Nhập đáp án `"Bánh Chưng"` và nhấn nút **Đoán**.
-   * Giao diện phản hồi thông báo màu xanh lá: `🎉 Chính xác! Đáp án đúng là: Bánh Chưng`.
-   ![Đoán đúng đáp án](/images/5-Workshop/5.12-Web-Interface/test_community_guess_correct.png)
-2. **Đoán sai đáp án:**
-   * Thử nhập câu trả lời sai như `"Bánh dày"` trên một thẻ câu đố và nhấn **Đoán**.
-   * Hệ thống phản hồi cảnh báo đỏ trực quan: `❌ Chưa đúng rồi, thử lại nhé!`.
-   ![Đoán sai đáp án](/images/5-Workshop/5.12-Web-Interface/test_community_guess_incorrect.png)
-3. **Bình chọn câu đố (Upvoting):**
-   * Nhấn biểu tượng nút 👍 ở góc trên thẻ câu đố Bánh Chưng. Điểm upvotes tăng từ 56 lên 57.
-   * Hệ thống kiểm tra và lưu bản ghi loại thực thể `UPVOTE` để giới hạn mỗi tài khoản chỉ được bầu chọn một lần duy nhất.
-   ![Upvote thành công](/images/5-Workshop/5.12-Web-Interface/test_community_upvote.png)
+#### 1.3. Phân hệ Thư Viện Của Tôi (Personal Library) - *Tích hợp thực tế*
+*   **Mô tả chức năng:** Kho lưu trữ cá nhân hiển thị danh sách câu đố của tài khoản đang đăng nhập (truy vấn trực tiếp từ bảng DynamoDB theo khóa PK `USER#<user_id>` và SK bắt đầu bằng `RIDDLE#`). Cho phép người dùng xuất tài liệu in ấn PDF/Word.
+*   **Trạng thái tích hợp:** Đã tích hợp thực tế. Các hành động Lưu câu đố (POST), Tải danh sách thư viện cá nhân (GET), và Xóa câu đố khỏi thư viện (DELETE) được đồng bộ hóa trực tiếp xuống bảng DynamoDB Single-Table thiết lập trên Cloud AWS thông qua REST API Gateway và Lambda.
+*   **Hình ảnh kiểm thử danh sách thư viện:**
+    Hiển thị danh sách câu đố đã lưu cục bộ (bao gồm câu đố `"Trái Đất"` vừa tạo):
+    ![Thư viện câu đố cá nhân](/images/5-Workshop/5.13-Web-Interface/test_library_list.png)
+*   **Hình ảnh kiểm thử xuất bản in ấn PDF:**
+    Nhấn nút **🖨️ Xuất PDF / In câu đố** trên thẻ câu đố `"Trái Đất"` để mở hộp thoại in tài liệu / preview PDF chuẩn hóa phục vụ việc giảng dạy trực tiếp:
+    ![Xuất tài liệu in ấn PDF](/images/5-Workshop/5.13-Web-Interface/test_library_export.png)
+    ![Xem trước bản in PDF](/images/5-Workshop/5.13-Web-Interface/test_library_export_PDF.png)
 
-#### 2.4. Bước 4: Kho Lưu trữ Cá nhân & Xuất bản PDF (My Library & S3 Export)
-1. **Truy vấn danh sách:** Chuyển sang tab **Thư Viện Của Tôi**. Hệ thống tự động truy vấn các câu đố do chính Giáo viên Mai tạo (bao gồm câu đố `"Trái Đất"` vừa lưu ở Bước 2).
-   ![Thư viện câu đố cá nhân](/images/5-Workshop/5.12-Web-Interface/test_library_list.png)
-2. **Xuất bản tài liệu qua Amazon S3:**
-   * Nhấp chọn nút **🖨️ Xuất PDF / In câu đố** trên thẻ câu đố `"Trái Đất"`.
-   * Trình duyệt kích hoạt lệnh yêu cầu **S3 Presigned URL** và mở hộp thoại in tài liệu / xem trước PDF chuẩn hóa phục vụ việc giảng dạy trực tiếp.
-   ![Xuất tài liệu in ấn PDF](/images/5-Workshop/5.12-Web-Interface/test_library_export.png)
-   ![Xuất tài liệu in ấn PDF](/images/5-Workshop/5.12-Web-Interface/test_library_export_PDF.png)
+#### 1.4. Phân hệ Cộng Đồng (Community Board) - *Phát triển trong tương lai*
+*   **Mô tả chức năng:** Bảng tin hiển thị các câu đố được chia sẻ công khai bởi các thành viên, sắp xếp theo số lượt bình chọn (Upvotes) giảm dần thông qua DynamoDB GSI1. Hỗ trợ học sinh giải đố tương tác trực tiếp và người dùng bình chọn (upvote) câu đố hay.
+*   **Trạng thái tích hợp:** Hoạch định phát triển trong tương lai. Giao diện hiện tại dùng dữ liệu cứng (mock data) để mô phỏng tương tác giải đố và bình chọn (upvote) trên bộ nhớ cục bộ.
+*   **Hình ảnh kiểm thử giải đố chính xác:**
+    Nhập đáp án đúng `"Bánh Chưng"` và bấm **Đoán**:
+    ![Đoán đúng đáp án](/images/5-Workshop/5.13-Web-Interface/test_community_guess_correct.png)
+*   **Hình ảnh kiểm thử giải đố chưa chính xác:**
+    Nhập đáp án sai `"Bánh dày"` và bấm **Đoán**:
+    ![Đoán sai đáp án](/images/5-Workshop/5.13-Web-Interface/test_community_guess_incorrect.png)
+*   **Hình ảnh kiểm thử bình chọn câu đố (Upvoting):**
+    Bấm biểu tượng 👍 ở góc trên thẻ câu đố Bánh Chưng. Điểm upvotes tăng từ 56 lên 57 ở bộ nhớ cục bộ:
+    ![Upvote thành công](/images/5-Workshop/5.13-Web-Interface/test_community_upvote.png)
 
-#### 2.5. Giao diện phụ trợ: Chế độ Tối (Dark Mode)
-Ứng dụng hỗ trợ Dark Mode đầy đủ thông qua CSS Variables để giảm mỏi mắt cho giáo viên và trẻ em khi dùng vào ban đêm.
-![Dark Mode](/images/5-Workshop/5.12-Web-Interface/riddle_dark_mode.png)
+#### 1.5. Giao diện phụ trợ: Chế độ Tối (Dark Mode)
+*   Ứng dụng hỗ trợ Dark Mode đầy đủ thông qua CSS Variables để giảm mỏi mắt khi dùng vào ban đêm:
+    ![Dark Mode View](/images/5-Workshop/5.13-Web-Interface/riddle_dark_mode.png)
 
 ---
 
-### 3. Các Tính năng Phát triển trong Tương lai (Future Development)
+### 2. Kế hoạch Phát triển trong Tương lai (Future Development)
 
-Mặc dù dự án đã hoàn thành các mục tiêu cốt lõi của Workshop, các tính năng sau đây được hoạch định phát triển trong tương lai để tối ưu hóa sản phẩm thương mại:
+Để mở rộng dự án hơn nữa trong tương lai, các nhiệm vụ cần triển khai bao gồm:
 
-*   **Tích hợp Xác thực Cognito thực tế:** Thay thế luồng mô phỏng Cognito nội bộ bằng thư viện `@aws-amplify/auth` hoặc SDK chính thức `amazon-cognito-identity-js` nhằm quản lý phiên đăng nhập thực tế, bảo mật bằng JWT Token và lưu trữ token an toàn trong Cookie/LocalStorage.
-*   **Liên kết API Gateway & DynamoDB thực:** Chuyển đổi toàn bộ cơ chế mô phỏng dữ liệu (Mock DB Client) sang tích hợp API Gateway HTTP API thông qua việc cấu hình tệp môi trường `.env` (`REACT_APP_API_URL`). Lúc này, mọi yêu cầu tạo, lưu, upvote câu đố sẽ tương tác trực tiếp với dữ liệu sống trên Cloud AWS.
-*   **Tính năng Game hóa (Gamification) cho trẻ em:** Phát triển giao diện giải đố tương tác cho học sinh, tích hợp tính năng tính điểm, giới hạn thời gian trả lời và bảng xếp hạng (Leaderboard) để kích thích sự hứng thú học tập của trẻ.
-*   **Xuất bản tài liệu PDF/Word hàng loạt:** Mở rộng backend Lambda tích hợp các thư viện xử lý tài liệu mạnh mẽ hơn như `pdfkit` hoặc `docx` để hỗ trợ Giáo viên tải về hàng loạt danh sách câu đố theo chủ đề chỉ với một cú nhấp chuột.
+*   **Tích hợp API Gateway thực tế cho Cộng đồng:** Chuyển đổi cơ chế cộng đồng và upvote cục bộ sang kết nối API Gateway và Lambda, lưu trữ trực tiếp các lượt upvotes của người dùng thông qua DynamoDB Transaction để đảm bảo tính toàn vẹn dữ liệu.
+*   **Hiện thực hóa luồng xuất file S3 Presigned URL thật:** Tích hợp hàm Lambda backend xuất file PDF/Word kết nối với S3 bucket thực tế để sinh và trả về Presigned URL có thời hạn cho phép tải xuống tài liệu thật, thay vì giao diện in ấn mô phỏng hiện tại.
+*   **Tính năng Game hóa (Gamification) tương tác:** Thiết kế bảng xếp hạng (Leaderboard) thời gian thực và chế độ giải đố tính giờ cho trẻ em.
 *   **Dashboard Phân tích cho Giáo viên (Analytics Dashboard):** Cấu hình AWS QuickSight hoặc xây dựng Dashboard biểu đồ ngay trên frontend hiển thị thống kê độ tuổi học sinh truy cập, chủ đề câu đố được tạo nhiều nhất và tỷ lệ giải đố thành công.
 
 ---
 
-### 4. Đánh giá Tổng kết Sản phẩm
+### 3. Đánh giá Tổng kết Sản phẩm
 
 *   **Tính toàn vẹn của Kiến trúc (End-to-End Serverless):** Giao diện liên kết mượt mà với các giả lập thiết kế Single-Table Design trong DynamoDB, các luồng bảo mật của Cognito, và quản lý S3, phản ánh đúng logic nghiệp vụ được cấu hình trên AWS Cloud.
 *   **Trải nghiệm Người dùng (UX/UI):** Phong cách Glassmorphism sang trọng, trực quan, dễ sử dụng cho các đối tượng giáo viên và phụ huynh. Thời gian phản hồi và chuyển đổi trang gần như tức thời nhờ cơ chế Single-Page Application.
 *   **Khả năng mở rộng:** Cấu trúc mã nguồn React được mô đun hóa cao, dễ dàng mở rộng thêm các tính năng như trò chơi giải đố tương tác trực tiếp hoặc tính năng chấm điểm học sinh trong tương lai.
+
+---
+
+*   **Link bài viết số 1:** [Facebook Post #1](https://web.facebook.com/groups/660548818043427/user/100029043690648)
+*   **Link bài viết số 2:** [Facebook Post #2](https://www.facebook.com/share/p/1ENb8bUptS/)
+*   **Link bài viết số 3:** [Facebook Post #3](https://www.facebook.com/groups/660548818043427/user/100015108252190)

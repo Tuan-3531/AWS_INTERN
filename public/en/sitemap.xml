@@ -67,19 +67,6 @@
                 href="http://localhost:1313/AWS_INTERN/vi/"
                 />
   </url><url>
-    <loc>http://localhost:1313/AWS_INTERN/1-worklog/1.9-week9/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/AWS_INTERN/1-worklog/1.9-week9/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.9-week9/"
-                />
-  </url><url>
     <loc>http://localhost:1313/AWS_INTERN/1-worklog/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -158,45 +145,6 @@
                 href="http://localhost:1313/AWS_INTERN/vi/2-proposal/"
                 />
   </url><url>
-    <loc>http://localhost:1313/AWS_INTERN/1-worklog/1.10-week10/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/AWS_INTERN/1-worklog/1.10-week10/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.10-week10/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/AWS_INTERN/1-worklog/1.11-week11/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/AWS_INTERN/1-worklog/1.11-week11/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.11-week11/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/AWS_INTERN/1-worklog/1.12-week12/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/AWS_INTERN/1-worklog/1.12-week12/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.12-week12/"
-                />
-  </url><url>
     <loc>http://localhost:1313/AWS_INTERN/5-workshop/5.3-amazon-dynamodb/</loc>
     <lastmod>2026-07-09T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -247,6 +195,19 @@
                 rel="alternate"
                 hreflang="vi"
                 href="http://localhost:1313/AWS_INTERN/vi/3-blogsposted/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/AWS_INTERN/4-eventparticipated/4.3-event3/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/AWS_INTERN/4-eventparticipated/4.3-event3/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/AWS_INTERN/vi/4-eventparticipated/4.3-event3/"
                 />
   </url><url>
     <loc>http://localhost:1313/AWS_INTERN/5-workshop/5.4-amazon-s3/</loc>
@@ -444,6 +405,19 @@
                 href="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.9-cloudfront/"
                 />
   </url><url>
+    <loc>http://localhost:1313/AWS_INTERN/1-worklog/1.9-week9/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/AWS_INTERN/1-worklog/1.9-week9/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.9-week9/"
+                />
+  </url><url>
     <loc>http://localhost:1313/AWS_INTERN/5-workshop/5.10-apigateway/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -455,6 +429,19 @@
                 rel="alternate"
                 hreflang="vi"
                 href="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.10-apigateway/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/AWS_INTERN/1-worklog/1.10-week10/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/AWS_INTERN/1-worklog/1.10-week10/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.10-week10/"
                 />
   </url><url>
     <loc>http://localhost:1313/AWS_INTERN/5-workshop/5.11-cognito/</loc>
@@ -470,6 +457,19 @@
                 href="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.11-cognito/"
                 />
   </url><url>
+    <loc>http://localhost:1313/AWS_INTERN/1-worklog/1.11-week11/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/AWS_INTERN/1-worklog/1.11-week11/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.11-week11/"
+                />
+  </url><url>
     <loc>http://localhost:1313/AWS_INTERN/5-workshop/5.12-web-interface/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -481,6 +481,19 @@
                 rel="alternate"
                 hreflang="vi"
                 href="http://localhost:1313/AWS_INTERN/vi/5-workshop/5.12-web-interface/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/AWS_INTERN/1-worklog/1.12-week12/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/AWS_INTERN/1-worklog/1.12-week12/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/AWS_INTERN/vi/1-worklog/1.12-week12/"
                 />
   </url><url>
     <loc>http://localhost:1313/AWS_INTERN/5-workshop/5.13-cleanup/</loc>

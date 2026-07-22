@@ -9,21 +9,25 @@ pre: " <b> 1.3. </b> "
 
 ### Week 3 Objectives:
 
-* Explore AWS database services in depth.
-* Learn about AWS Bedrock and its real-world AI applications.
+* Study Module 
+* Research BMAD
+* Learn how to draw architecture diagrams
 
 ### Tasks to be carried out this week:
 
 | Day | Task                                       | Start Date | Completion Date | Reference Material |
 | --- | ------------------------------------------ | ---------- | --------------- | ------------------ |
-| 2   | Learn Amazon RDS and DynamoDB services     | 04/05/2026 | 04/05/2026      | AWS Docs           |
-| 3   | Practice creating databases on RDS         | 05/05/2026 | 05/05/2026      | AWS Practice       |
-| 4   | Study AWS Bedrock and AI foundation models | 06/05/2026 | 06/05/2026      | AWS Docs           |
-| 5   | Practice calling Bedrock APIs              | 07/05/2026 | 08/05/2026      | AWS Practice       |
-| 6   | Review knowledge and create demo           | 09/05/2026 | 09/05/2026      | Internal Docs      |
+| 2   | Study Module 2     | 04/05/2026 | 04/05/2026      | https://cloudjourney.awsstudygroup.com/        |
+| 3   | Research BMAD         | 05/05/2026 | 05/05/2026      |  |
+| 4   | Learn how to draw architecture diagrams | 06/05/2026 | 06/05/2026      | https://www.youtube.com/watch?reload=9&si=eMtWMoqwsQBsSOx2&           |
+| 5   | Research and install Kiro              | 07/05/2026 | 08/05/2026      |     |
+| 6   | Practice drawing system architecture for the capstone project           | 09/05/2026 | 09/05/2026      |    |
+
+
 
 ### Week 3 Achievements:
 
-* Better understanding of RDS and DynamoDB.
-* Successfully created databases on AWS.
-* Learned how AWS Bedrock works and AI integration basics.
+* Module 2 Completion: Successfully completed Module 2 coursework on Cloud Journey.
+* BMAD & Kiro Setup: Researched BMAD concepts and successfully installed and configured Kiro.
+* Architecture Diagramming Mastery: Learned standard methods and best practices for creating system architecture diagrams from technical video guides.
+* Project Application: Applied diagramming skills to draft and design the initial system architecture for the capstone project.

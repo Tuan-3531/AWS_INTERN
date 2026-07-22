@@ -9,19 +9,19 @@ pre: " <b> 1.4. </b> "
 
 ### Week 4 Objectives:
 
-* Complete AWS Module 3 content.
-* Practice lab exercises to strengthen understanding.
-* Apply theoretical knowledge in practical tasks.
+* Study Module 3
+* Complete Labs 03 and 10
+* Search for a capstone project topic
 
 ### Tasks to be carried out this week:
 
-| Day | Task                                    | Start Date | Completion Date | Reference Material |
-| --- | --------------------------------------- | ---------- | --------------- | ------------------ |
-| 2   | Study AWS Module 3 and its main content | 11/05/2026 | 11/05/2026      | AWS Docs           |
-| 3   | Continue studying Module 3              | 12/05/2026 | 12/05/2026      | AWS Docs           |
-| 4   | Complete Module 3 lab exercises         | 13/05/2026 | 14/05/2026      | AWS Practice       |
-| 5   | Review lab results                      | 15/05/2026 | 15/05/2026      | AWS Practice       |
-| 6   | Summarize Module 3 knowledge            | 16/05/2026 | 16/05/2026      | Internal Docs      |
+| Day | Task                                                         | Start Date | Completion Date | Reference Material |
+| --- | ------------------------------------------------------------ | ---------- | --------------- | ------------------ |
+| 2   | Study Module 3 and explore its contents                    | 11/05/2026 | 11/05/2026      | <https://cloudjourney.awsstudygroup.com/>|
+| 3   | Continue studying Module 3 and create IAM user            | 12/05/2026 | 12/05/2026      | <https://cloudjourney.awsstudygroup.com/>|
+| 4   | Learn how to complete Labs 03 and 10                       | 13/05/2026 | 14/05/2026      | <https://cloudjourney.awsstudygroup.com/>|
+| 5   | Complete Labs 03 and 10                                    | 15/05/2026 | 15/05/2026      | <https://cloudjourney.awsstudygroup.com/>|
+| 6   | Research and explore AWS services for the capstone project | 16/05/2026 | 16/05/2026      | <https://cloudjourney.awsstudygroup.com/>|
 
 ### Week 4 Achievements:
 

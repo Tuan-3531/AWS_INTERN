@@ -9,19 +9,19 @@ pre: " <b> 1.4. </b> "
 
 ### Mục tiêu tuần 4:
 
-* Hoàn thành nội dung Module 3.
-* Thực hành các bài lab để củng cố kiến thức.
-* Áp dụng lý thuyết vào thực hành thực tế.
+* Học module 3
+* Làm bài lab 03, 10
+* Tìm kiếm đề tài đồ án
 
 ### Các công việc cần triển khai trong tuần này:
 
-| Thứ | Công việc                               | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-| --- | --------------------------------------- | ------------ | --------------- | -------------- |
-| 2   | Học Module 3 và tìm hiểu nội dung chính | 11/05/2026   | 11/05/2026      | AWS Docs       |
-| 3   | Tiếp tục học Module 3                   | 12/05/2026   | 12/05/2026      | AWS Docs       |
-| 4   | Thực hành bài lab Module 3              | 13/05/2026   | 14/05/2026      | AWS Practice   |
-| 5   | Kiểm tra kết quả bài lab                | 15/05/2026   | 15/05/2026      | AWS Practice   |
-| 6   | Tổng kết kiến thức Module 3             | 16/05/2026   | 16/05/2026      | Internal Docs  |
+| Thứ | Công việc                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | ------------------------------------------- | ------------ | --------------- | -------------- |
+| 2   | Học Module 3 và tìm hiểu nội dung           | 11/05/2026   | 11/05/2026      | <https://cloudjourney.awsstudygroup.com/>   |
+| 3   | Tiếp tục học Module 3 và tạo các IAM user   | 12/05/2026   | 12/05/2026      | <https://cloudjourney.awsstudygroup.com/>   |
+| 4   | Học cách thực hành lab 03, 10               | 13/05/2026   | 14/05/2026      | <https://cloudjourney.awsstudygroup.com/>   |
+| 5   | Làm bài lab 03, 10                          | 15/05/2026   | 15/05/2026      | <https://cloudjourney.awsstudygroup.com/>   |
+| 6   | Tham khảo và tìm hiểu các service cho đồ án | 16/05/2026   | 16/05/2026      | <https://cloudjourney.awsstudygroup.com/>   |
 
 ### Kết quả đạt được tuần 4:
 
