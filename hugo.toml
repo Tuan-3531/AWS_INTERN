@@ -20,18 +20,14 @@ page = ["HTML", "RSS"]
   disableNextPrev = false
 
 [Languages]
-[languages.en]
+[Languages.en]
 title = "Internship Report"
 weight = 1
-
-[languages.en.params]
 label = "English"
 
-[languages.vi]
+[Languages.vi]
 title = "Báo cáo thực tập"
 weight = 2
-
-[languages.vi.params]
 label = "Tiếng Việt"
 
 [[Languages.en.menu.shortcuts]]
