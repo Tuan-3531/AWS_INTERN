@@ -30,9 +30,9 @@ pre: " <b> 4. </b> "
 
 
 ### [Event 3](4.3-Event3/)
-&emsp;**Tên sự kiện:** 	FCAJ Community Day - June 2026
+&emsp;**Tên sự kiện:** 	FCAJ x Agentic AI Build Week: Show Up. Build. Pitch. WIN!
 
-&emsp;**Thời gian:**  09:00 ngày 27/06/2026
+&emsp;**Thời gian:**  08:30 ngày 25/07/2026
 
 &emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
 

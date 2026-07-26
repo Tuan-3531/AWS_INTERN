@@ -29,9 +29,9 @@ pre: " <b> 4. </b> "
 
 
 ### [Event 3](4.3-Event3/)
-&emsp;**Event Name:** FCAJ Community Day - June 2026
+&emsp;**Event Name:** FCAJ x Agentic AI Build Week: Show Up. Build. Pitch. WIN!
 
-&emsp;**Date & Time:** 09:00, June 27, 2026  
+&emsp;**Date & Time:** 08:30, July 25, 2026  
 
 &emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
 
